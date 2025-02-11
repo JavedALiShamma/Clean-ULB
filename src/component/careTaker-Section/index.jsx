@@ -2,7 +2,18 @@ import styles from "./styles.module.css";
 import Btoilet from "../../assets/icons/Btoilet.png"
 
 import { useState } from "react";
+
 const CareTakerDashboard=()=>{
+    const style = {
+        color: '#e21d5f',
+     
+      };
+    const dateObj = new Date();
+    const month   = dateObj.getUTCMonth() + 1; // months from 1-12
+    const day     = dateObj.getUTCDate();
+    const year    = dateObj.getUTCFullYear();
+
+    const newDate = day + "/" + month + "/" + year; 
     const[isShow,setisShow]=useState(false);
     const handleShow=()=>{
         setisShow(!isShow);
@@ -15,19 +26,31 @@ const CareTakerDashboard=()=>{
                    {isShow && <div className={styles.popUpArea}>
                     <div className={styles.popUp}>
                         <div className={styles.cardArea}>
-                            <h3 className="txt-center text-primary">
+                            <h3 style={style} className="txt-center">
                                 All Details of toilet cleaning and caretaker
                             </h3>
                             <div className={styles.detailedContainer}>
                                 <div className={styles.smallCard}>
-                                    <p>Toilet Opening time : 10.00 AM</p>
-                                </div>
-                                <div className={styles.smallCard}>
-                               
-                                </div>
-                                <div className={styles.smallCard}>
-                                
-                                </div>
+                                    <div className={styles.innerCard}>
+                                    <h4 className="py-3">TODAY</h4>   
+                                        <p className={styles.newDate1}>Date :{newDate}</p>
+                                    </div>
+                                    <p style={style}> Toilet Open time: 10.20 AM</p>
+                                 </div>
+                                 <div className={styles.smallCard}>
+                                    <div className={styles.innerCard}>
+                                    <h4 className="py-3">TOILET CLEAN TIME</h4>   
+                                        <p className={styles.newDate1}>Date :{newDate}</p>
+                                    </div>
+                                    <p style={style}> Toilet was cleaned On : 10.50 AM</p>
+                                 </div>
+                                 <div className={styles.smallCard}>
+                                    <div className={styles.innerCard}>
+                                    <h4 className="py-3">PEOPLE VISITED TODAY</h4>   
+                                        <p className={styles.newDate1}>Date :{newDate}</p>
+                                    </div>
+                                    <p style={style}> 24 people visited today</p>
+                                 </div>
                             </div>
                             <div className="d-flex">
                                 <div className={styles.imageArea}>
@@ -44,7 +67,7 @@ const CareTakerDashboard=()=>{
                             </div>
 
                         </div>
-                        <button onClick={handleShow} type="button" id={styles.closeBtn} className="btn btn-primary m-1 p-2">Close</button>
+                        <button onClick={handleShow} type="button" id={styles.closeBtn}  className="btn btn-primary m-1 p-2 px-4">Close</button>
                     </div>
                    
                     </div>
