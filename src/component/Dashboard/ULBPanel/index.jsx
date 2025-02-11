@@ -40,7 +40,7 @@ const DashboardMain=()=>{
         </Navbar>
        
        <div className={styles.heroArea}>
-       <div id={styles.sidePanel} className="d-flex p-0 align-iteams-center justify-content-center">
+       <div id={styles.sidePanel} className="">
         <SidePanelArea/>
         </div>
         

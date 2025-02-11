@@ -8,7 +8,7 @@ const RouteToCT=()=>{
     const addNewCt =()=>{
         const{currPath}=location.pathname;
         console.log(location.pathname);
-        const newPathName="ulbDashboard/AddnewPt";
+        const newPathName="ULBDashboard/AddnewPt";
         location.pathname=newPathName;
         
     }
