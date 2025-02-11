@@ -127,7 +127,7 @@
     height: 100%;
     /* border: 1.5px solid #e21d5f; */
     border:.5px solid #e21d5f;
-
+    border-radius: 10px; 
     color: white;
     cursor: pointer;
     overflow: hidden;

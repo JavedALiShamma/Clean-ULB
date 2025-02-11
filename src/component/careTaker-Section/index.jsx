@@ -95,13 +95,73 @@ const CareTakerDashboard=()=>{
                         </div>
                    </div>
                    <div className={styles.card}>
-                               
+                   <div className={styles.logoArea}>
+                            <img className={styles.logoImage} src={Btoilet} alt="" />
+                        </div>
+                        <div className={styles.adressNIDarea}>
+                            <p>Adrees :Near kapoori bazar,Bada bazar road </p>
+                            <p>Toilet ID :80004512 </p>
+                            <p>Ward no : 32 </p>
+                            <p>Category : public toilet</p>
+                        </div>
+                        <div className={styles.caretakerDetails}>
+                            <p>Care taker name :Roshan singh</p>
+                            <p> Mobile no : 9987541402</p>
+                            <p>O&M :ULB </p>
+                        </div>
+                        <div className={styles.cleanAndOpenArea}>
+                            <button onClick={handleShow} type="button" className="btn btn-success my-1">Clean</button>
+                            <button type="button" className="btn btn-success my-1">Open</button>
+                        </div>
+                        <div className={styles.AttendanceRegister}>
+                            <button className="btn btn-danger my-1">Download Attendance Register</button>
+                        </div>    
                    </div>
-                   <div id="centerCard2" className={styles.card}>
-
+                   <div  className={styles.card}>
+                   <div className={styles.logoArea}>
+                            <img className={styles.logoImage} src={Btoilet} alt="" />
+                        </div>
+                        <div className={styles.adressNIDarea}>
+                            <p>Adrees :Near kapoori bazar,Bada bazar road </p>
+                            <p>Toilet ID :80004512 </p>
+                            <p>Ward no : 32 </p>
+                            <p>Category : public toilet</p>
+                        </div>
+                        <div className={styles.caretakerDetails}>
+                            <p>Care taker name :Roshan singh</p>
+                            <p> Mobile no : 9987541402</p>
+                            <p>O&M :ULB </p>
+                        </div>
+                        <div className={styles.cleanAndOpenArea}>
+                            <button onClick={handleShow} type="button" className="btn btn-danger my-1">UnClean</button>
+                            <button type="button" className="btn btn-success my-1">Open</button>
+                        </div>
+                        <div className={styles.AttendanceRegister}>
+                            <button className="btn btn-danger my-1">Download Attendance Register</button>
+                        </div>
                    </div>
                    <div className={styles.card}>
-
+                   <div className={styles.logoArea}>
+                            <img className={styles.logoImage} src={Btoilet} alt="" />
+                        </div>
+                        <div className={styles.adressNIDarea}>
+                            <p>Adrees :Near kapoori bazar,Bada bazar road </p>
+                            <p>Toilet ID :80004512 </p>
+                            <p>Ward no : 32 </p>
+                            <p>Category : public toilet</p>
+                        </div>
+                        <div className={styles.caretakerDetails}>
+                            <p>Care taker name :Roshan singh</p>
+                            <p> Mobile no : 9987541402</p>
+                            <p>O&M :ULB </p>
+                        </div>
+                        <div className={styles.cleanAndOpenArea}>
+                            <button onClick={handleShow} type="button" className="btn btn-success my-1">Clean</button>
+                            <button type="button" className="btn btn-danger my-1">Close</button>
+                        </div>
+                        <div className={styles.AttendanceRegister}>
+                            <button className="btn btn-danger my-1">Download Attendance Register</button>
+                        </div>
                    </div>
                 </div>
             </div>
