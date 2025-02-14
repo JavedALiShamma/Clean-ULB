@@ -22,7 +22,13 @@ const FeedbackSection=()=>{
              <option value="pt">public toilet</option>
              <option value="urinal">Urinals</option>
             </select>
-          
+            {isShow && (<div className={styles.popUpArea}>
+                  
+                  <div className={styles.popUp}>
+                     
+                  </div>
+                 
+                  </div>)}
             </div>
             
             <div className={styles.cardAreaSection}>
