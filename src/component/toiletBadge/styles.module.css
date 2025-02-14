@@ -41,3 +41,27 @@
     box-shadow: 0px 4px 6px rgba(69, 68, 68, 0);
     transition: transform 0.3s ease;
 }
+.mainSection{
+    width: 100%;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.paramOfFeedbackSection{
+    box-sizing: border-box;
+  width: 50%;
+    border: 1px solid red;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    margin-bottom: 0px;
+    padding: 10px;
+    gap: 10px;
+
+}
+.chartAreaSection{
+  
+    border: 1px solid green;
+    height: auto;
+}
