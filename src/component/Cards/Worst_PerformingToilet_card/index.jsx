@@ -21,7 +21,7 @@ const WorstPerformingCard=(props)=>{
     const[data,setData]=useState(props.data);
     const[isShow ,setIsShow]=useState(false);
   
-        const showNegativeParam=(ele)=>{
+    const showNegativeParam=(ele)=>{
         let toShow=[];
             ele.map((i)=>{
               if("Q1" in i){

@@ -3,16 +3,10 @@ import styles from "./styles.module.css"
 import { starCountRating } from "../feedback_Star/starCount";
 import { useState } from "react";
 import { Heading2 } from "lucide-react";
-import DetailedView from "../DetailedToiletView";
-
 const ToiletBadge=(props)=>{
     const res=props.data;
-    console.log(res);
-    const[isShow,setIsShow]=useState(false);
-    const handleShow=()=>{
-        setIsShow(!isShow);
-    }
-    
+
+    const[isShow,setIsShow]=useState(true);
     return(
 
                 <div key={res.toiletID} className={styles.cardArea}>
@@ -34,21 +28,7 @@ const ToiletBadge=(props)=>{
                     </div>  
                 <div className="d-flex flex-column gap-1 flex-1">
                     <button type="button" className="btn btn-light text-primary">Download Feedback</button>
-                    <button onClick={handleShow} type="button" className="btn btn-light text-success">View Summary</button>
-                      {isShow && (<div className={styles.popUpArea}>
-                    
-                                      <div className={styles.popUp}>
-                                         <h2 className="text-center text-primary">Summary Report of Toilet </h2>
-                                         <div className={styles.mainSection}>
-                                             <div className={styles.paramOfFeedbackSection}>
-                                                <h5>These are the parameter which are missing in toilet {res.toiletID}</h5>
-                                                    <DetailedView data={res.negativeFeedback}/>
-                                             </div>
-                                             <div className={styles.chartAreaSection}></div>
-                                         </div>
-                                      </div>
-                                        <button onClick={()=>(setIsShow(!isShow))} type="button" className="btn btn-primary">Close</button>
-                                      </div>)}
+                    <button type="button" className="btn btn-light text-success">View Summary</button>
                 </div>
                    
                 </div>
