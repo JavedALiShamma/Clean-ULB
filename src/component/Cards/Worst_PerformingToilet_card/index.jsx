@@ -10,7 +10,7 @@ import { Route, Routes, useParams } from "react-router";
 import IndividualToilet from "../../Individual Toilet";
 import { starCountRating } from "../../feedback_Star/starCount";
 import StarRating from "../../feedback_Star";
-import washBasin1 from "../../../assets/icons/washBasin0.png";
+// import washBasin1 from "../../../assets/icons/washBasin0.png";
 import waterTap from "../../../assets/icons/water-tap.png";
 import badSmell from "../../../assets/icons/badSmell.png";
 import doorBolting from "../../../assets/icons/doorBolting.png";
@@ -43,7 +43,7 @@ const WorstPerformingCard=(props)=>{
               if("Q2" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={washBasin1} alt="" />
+                            <img src={waterTap} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>

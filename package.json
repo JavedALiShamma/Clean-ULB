@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://khushalgoyal.github.io/Clean-UBL/",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000 --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
