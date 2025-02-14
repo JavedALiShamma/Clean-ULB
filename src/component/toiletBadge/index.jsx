@@ -1,10 +1,15 @@
 import StarRating from "../feedback_Star";
 import styles from "./styles.module.css"
 import { starCountRating } from "../feedback_Star/starCount";
+import { useState } from "react";
+import { Heading2 } from "lucide-react";
 const ToiletBadge=(props)=>{
     const res=props.data;
+
+    const[isShow,setIsShow]=useState(true);
     return(
-        <div key={res.toiletID} className={styles.cardArea}>
+
+                <div key={res.toiletID} className={styles.cardArea}>
                     <h5 id={styles.cardHeading} className="text-center py-1 font-weight-bold"> Category :{res.category}</h5>
                 <div className="d-flex justify-content-evenly">
                 <div id={styles.addressArea} className="px-2 flex-1  text-wrap">
@@ -27,6 +32,7 @@ const ToiletBadge=(props)=>{
                 </div>
                    
                 </div>
+                
                 </div>
     )
 }

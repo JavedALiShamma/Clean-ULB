@@ -21,12 +21,13 @@
     height: 70px;
 }
 .cardsArea{
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row !important;
+    
     flex-wrap: wrap;
-    position: relative;
+    
 }
 #binCard{
     width: 150px;
@@ -61,11 +62,12 @@
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    
 }
 .imageSection{
-    width: 80%;
+    width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-around;
     align-items: center;
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./styles.module.css"
 import litterBin from "../../assets/icons/litterBin.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import GVP from "../../assets/icons/GVP.jpg";
 const PopUp=(props)=>{
         let res=props.data;
       
@@ -14,7 +15,7 @@ const PopUp=(props)=>{
         <div className={styles.cardsArea}>
         {isShow && <div className={styles.popUpArea}>
         <div className={styles.popUp}>
-            <h3 className="text-primary">Litter Bin {res.binNo} Details</h3>
+            <h3 className="text-left text-primary w-100">Details of Litter Bin no: {res.binNo} </h3>
             <div className={styles.detailsOfBin}>
                 <p> ADDRESS : {res.address}</p>
                 <div className={styles.imageSection}>
@@ -39,11 +40,12 @@ const PopUp=(props)=>{
                     </div>
                 </div>
             </div>
+            <button onClick={()=>(setShow(!isShow))} type="button" className="btn btn-primary p-3"> Close</button>
         </div>
-        <button onClick={()=>(setShow(!isShow))} type="button" className="btn btn-primary p-3"> Close</button>
+        
         </div>}
         <div id={styles.binCard} className="d-flex flex-column m-2  border border-success rounded">
-           <img className={styles.demoImage} src={litterBin} alt="" />
+           <img className={styles.demoImage} src={res.isGVP==true?GVP :litterBin} alt="" />
             <p className="text-wrap bd-highlight"> Litter:{res.binNo}</p>
             <p className={styles.cardaddress}>{res.address}</p>
             <button type="button" className={res.isClean==true?"btn btn-success w-75" :"btn btn-danger w-75"}>{res.isClean==true?"Clean":"Unclean"}</button>

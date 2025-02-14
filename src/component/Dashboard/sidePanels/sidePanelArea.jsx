@@ -6,7 +6,8 @@ import { createSearchParams, useNavigate } from "react-router";
 import RRR from "../../../assets/icons/RRR.png";
 import careTker1 from "../../../assets/icons/careTaker1.png";
 import GD from "../../../assets/icons/GD.png";
-import litterBin from "../../../assets/icons/litterBin.png"
+import litterBin from "../../../assets/icons/litterBin.png";
+import CandD from "../../../assets/icons/C&D.png"
 function SidePanelArea() {
     const navigate=useNavigate();
 const onDashboard=()=>{
@@ -36,6 +37,14 @@ const onRRRCentre=()=>{
 const onLitterBoxSection=()=>{
     navigate({
         pathname:"/ULBDashboard/LitterBins",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+}
+const onCandDWaste=()=>{
+    navigate({
+        pathname:"/ULBDashboard/C&DWaste",
         search:createSearchParams({
             
         }).toString()
@@ -77,7 +86,7 @@ const onFeedback=()=>{
             <span >
                     <img className={styles.leftLogos} src={litterBin} alt="Tourist logo" />
                     </span>
-                Litters Bin in ULB </li>
+                Litters Bin /GVP</li>
             <li className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={Image} alt="Tourist logo" />
@@ -102,6 +111,16 @@ const onFeedback=()=>{
                     <img className={styles.leftLogos} src={GD} alt="Tourist logo" />
                     </span> Grievance Redressal/
                     शिकायत निवारण
+                    </li>
+            <li className={styles.ptLeft}>
+            <span >
+                    <img onClick={onCandDWaste} className={styles.leftLogos} src={CandD} alt="Tourist logo" />
+                    </span> C & D Waste Collection
+                    </li>
+            <li className={styles.ptLeft}>
+            <span >
+                    <img className={styles.leftLogos} src={GD} alt="Tourist logo" />
+                    </span> Auto Tipper Tracker
                     </li>
         </ul>
     </div>

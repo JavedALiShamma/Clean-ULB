@@ -24,9 +24,9 @@ let fiveStarCount=-1;
 const ID=854212;
 
 var totalFeedback={
-  ct:12,
-  pt:21,
-  tourist:31
+  ct:1201,
+  pt:2145,
+  tourist:310
 }
 
 const TotalCpTp=()=>{
@@ -76,7 +76,8 @@ const [btData,setbtData]=useState(bestToilet);
                   <p className={styles.badges}>Toilet ID:{btData.toiletID}</p>
                   <p className={styles.badges}>Category:{btData.category}</p>
                 </div>
-                <p className={styles.oAndMArea}>Operation and maintainance done by  : {btData.oAndM}</p>
+                
+                <p className={styles.oAndMArea}>O&M done by  : {btData.oAndM}</p>
                 <p className={styles.careTaker}>Care taker :{btData.careTaker}</p>
                 <div className={styles.openAndCloseArea}>
                   <p>Opening time: 05.00 AM</p>

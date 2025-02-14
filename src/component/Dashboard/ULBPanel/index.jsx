@@ -12,15 +12,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LitterBins from "../../LitterBinsInULB";
 import FeedbackSection from "../../Feedback-Section";
 import CareTakerDashboard from "../../careTaker-Section";
+import { useState } from "react";
 const DashboardMain=()=>{
+    const [isShow,setIsShow]=useState(true);
     return(
         <>
         {/* //className={styles.navbaar} */}
         <div className={styles.mainPageAll}>
-        <Navbar expand="lg" className="bg-body-tertiary d-flex justify-content-between p-2">
+        <Navbar id={styles.navbarTop} expand="lg" className="bg-body-tertiary d-flex justify-content-between p-2">
             <div className={styles.menuLogo}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
-            <span className="material-symbols-outlined">menu</span>
+            <span onClick={()=>{setIsShow(!isShow)}} id={styles.menuBtn} className="material-symbols-outlined">menu</span>
             </div>
             <div className={styles.swachhLogo}>
                 <img src={swachLogo} alt="Swachh logo" />
@@ -30,6 +32,8 @@ const DashboardMain=()=>{
                 <p className={styles.CityName}>Dungarpur:</p> 
                 <p className={styles.ULBname}>Dungarpur:</p> 
             </div>
+            <button type="btn" className="btn btn-danger px-3">Help ?</button>
+            <button type="btn" className="btn btn-success px-3">Contact us</button>
             <div className={styles.NodalOfficerName}>
                 <img src={profileManlogo} alt="man log" />
                 <div>
@@ -40,9 +44,9 @@ const DashboardMain=()=>{
         </Navbar>
        
        <div className={styles.heroArea}>
-       <div id={styles.sidePanel} className="">
+       {isShow && <div id={styles.sidePanel} className={styles.sidePanel}>
         <SidePanelArea/>
-        </div>
+        </div>}
         
         <div className={styles.heroRight}>
        
@@ -60,10 +64,11 @@ const DashboardMain=()=>{
         
         {/* <TotalCpTp/> */}
         </div>
-        {/* <footer>
-          <h2>Hello footer</h2>
-        </footer> */}
+       
+       
         </div>
+       
+        
         </div>
         
         </>

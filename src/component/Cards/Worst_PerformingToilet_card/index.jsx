@@ -10,6 +10,12 @@ import { Route, Routes, useParams } from "react-router";
 import IndividualToilet from "../../Individual Toilet";
 import { starCountRating } from "../../feedback_Star/starCount";
 import StarRating from "../../feedback_Star";
+import washBasin1 from "../../../assets/icons/washBasin0.png";
+import waterTap from "../../../assets/icons/water-tap.png";
+import badSmell from "../../../assets/icons/badSmell.png";
+import doorBolting from "../../../assets/icons/doorBolting.png";
+import toiletLight from "../../../assets/icons/toiletLight.png";
+import lightIcon from "../../../assets/icons/lightIcon.png"
 
 const WorstPerformingCard=(props)=>{
     const[data,setData]=useState(props.data);
@@ -37,11 +43,11 @@ const WorstPerformingCard=(props)=>{
               if("Q2" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={washBasin1} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                Wash basins are not clean and usable
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q2}
@@ -54,11 +60,11 @@ const WorstPerformingCard=(props)=>{
               if("Q3" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={waterTap} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                Water is not available
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q3}
@@ -71,11 +77,11 @@ const WorstPerformingCard=(props)=>{
               if("Q4" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={lightIcon} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                No proper light in toilet
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q4}
@@ -88,11 +94,11 @@ const WorstPerformingCard=(props)=>{
               if("Q5" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={toiletLight} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                Ventelation is not found
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q5}
@@ -105,11 +111,11 @@ const WorstPerformingCard=(props)=>{
               if("Q6" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={doorBolting} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                Door bolting is not working
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q6}
@@ -122,11 +128,11 @@ const WorstPerformingCard=(props)=>{
               if("Q7" in i){
                 toShow=[...toShow,
                     <div key={toShow.length} className={styles.negativeParam}>
-                            <img src={seatIcon} alt="" />
+                            <img src={badSmell} alt="" />
                             <div className={styles.negativeCountNparamArea}>
     
                             <p className={styles.negativeMessage}>
-                                Toilet seat is not clean and usable
+                                Bad smell in toilet
                             </p>
                             <p className={styles.nagetiveFeedbacBadge}>
                                 Negative Count : {i.Q7}
@@ -175,14 +181,16 @@ const WorstPerformingCard=(props)=>{
                             Categorgy:{data.category}
                         </p>    
                         </div>
+                        <div className={styles.oNdmAndCareTakerArea}>
                         <p className={styles.oandMArea}>O&M:{data.oAndM}</p>
                         <p className={styles.caretakerArea}>Caretaker :{data.careTaker}</p>
+                        </div>
                     </div>
                     {isShow && 
             <div className={styles.popUpArea}> 
             <div className={styles.popUp}>
                 <IndividualToilet data={data}/>
-                <button type="button" className="btn btn-primary p-2 px-4 m-2" onClick={viewFullDataCT}>Close</button>
+                <button type="button" className="btn btn-primary px-4 m-1" onClick={viewFullDataCT}>Close</button>
             </div>
             </div>}
                     <button onClick={viewFullDataCT} className={styles.viewFullBtn}>View full feedback Details →</button>
