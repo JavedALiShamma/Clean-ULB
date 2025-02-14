@@ -21,7 +21,7 @@ const Header=()=>{
     <BrowserRouter>
     <Routes>
      
-      <Route path="/" element={<DashboardMain/>}></Route>
+      <Route path="*" element={<DashboardMain/>}></Route>
       <Route path="/newEntry" element={<RRRform/>}></Route>
       <Route path="/ULBDashboard/*" element={<DashboardMain/>}></Route>
       <Route path="/feedbackForm" element ={<FeedbackArea/>}></Route>

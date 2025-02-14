@@ -58,7 +58,7 @@ const DashboardMain=()=>{
             <Route path="/LitterBins" element={<LitterBins/>}></Route>
             <Route path="/feedbackSection" element={<FeedbackSection/>}></Route>
             <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
-            <Route path="*" element={<TotalCpTp/>}></Route>
+            <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>
         
