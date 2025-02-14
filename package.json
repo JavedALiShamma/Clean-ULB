@@ -1,9 +1,9 @@
 {
+  "homepage": "khushalgoyal.github.io/Clean-UBL",
   "name": "myapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://khushalgoyal.github.io/Clean-UBL/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
