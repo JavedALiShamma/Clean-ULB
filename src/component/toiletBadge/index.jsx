@@ -4,10 +4,13 @@ import { starCountRating } from "../feedback_Star/starCount";
 import { useState } from "react";
 import { Heading2 } from "lucide-react";
 import DetailedView from "../DetailedToiletView";
+import ParamMissing from "../paramMissing";
 
 const ToiletBadge=(props)=>{
     const res=props.data;
-    console.log(res);
+    
+    
+
     const[isShow,setIsShow]=useState(false);
     const handleShow=()=>{
         setIsShow(!isShow);
@@ -38,22 +41,41 @@ const ToiletBadge=(props)=>{
                       {isShow && (<div className={styles.popUpArea}>
                     
                                       <div className={styles.popUp}>
-                                         <h2 className="text-center text-primary">Summary Report of Toilet </h2>
+                                         <h2 className="text-center text-primary">Summary Report of Toilet ({res.toiletID}) </h2>
                                          <div className={styles.mainSection}>
                                              <div className={styles.paramOfFeedbackSection}>
-                                                <h5>These are the parameter which are missing in toilet {res.toiletID}</h5>
+                                                <div className="w-100">
+                                                <div className="w-100 d-flex m-2 justify-content-between">
+
+                                                <h5 className="text-black text-center mx-3 ">These are the parameter which are missing in toilet through feedback</h5>
+                                                <p className="badge text-white bg-danger p-3"> Total Marks deducted {(Object.keys(res.negativeFeedback[0]).length)*10}</p>
+                                                <button type="button" className="btn btn-success p-1 mx-3">Notify care taker</button>
+                                                </div>
+                                                </div>
+                                                <div className="w-100 d-flex gap-2 my-2">
+
                                                     <DetailedView data={res.negativeFeedback}/>
+
+                                                </div>
+                                                <p className="text-white w-100 bg-danger">ULB is requested to fix these parameters for better performance</p>
+                                             </div>
+                                             <div className="w-100 text-black">
+                                             <ParamMissing data={res.toiletID}/>
+                                             </div>
+                                             <div className="w-100 text-black d-flex">
+                                                <div className="w-50"> hi</div>
+                                                <div className="w-50"> bye</div>
                                              </div>
                                              <div className={styles.chartAreaSection}></div>
                                          </div>
+                                        <button onClick={()=>(setIsShow(!isShow))} type="button" className="btn btn-primary m-1">Close</button>
                                       </div>
-                                        <button onClick={()=>(setIsShow(!isShow))} type="button" className="btn btn-primary">Close</button>
                                       </div>)}
-                </div>
-                   
-                </div>
-                
-                </div>
+                                        </div>
+                                            
+                                        </div>
+                                            
+                                        </div>
     )
 }
 export default ToiletBadge;

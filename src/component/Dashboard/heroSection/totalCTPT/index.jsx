@@ -122,6 +122,16 @@ const [btData,setbtData]=useState(bestToilet);
           </div>
           <div className={styles.bestPracticeCard}>
             <div className={styles.logoImage}>
+              <img className={styles.bpImg} src={handwash} alt="" />
+            </div>
+            <div className={styles.logoDetails}>
+              <h5 className={styles.parameter}>Paramter :Availability of soap/operational soap dispenser & air freshener</h5>
+              <p className={styles.badge}>SS Makrs: 10</p>
+              <p className={styles.stepsTodo}>Steps to do: Put a dustbin for waste disposal of tissues and waste</p>
+            </div>
+          </div>
+          <div className={styles.bestPracticeCard}>
+            <div className={styles.logoImage}>
               <img className={styles.bpImg} src={unAbleSeat} alt="" />
             </div>
             <div className={styles.logoDetails}>

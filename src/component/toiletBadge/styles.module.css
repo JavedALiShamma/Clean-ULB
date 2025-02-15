@@ -40,6 +40,7 @@
     text-align: center;
     box-shadow: 0px 4px 6px rgba(69, 68, 68, 0);
     transition: transform 0.3s ease;
+    overflow: scroll;
 }
 .mainSection{
     width: 100%;
@@ -48,17 +49,8 @@
     flex-direction: column;
 }
 .paramOfFeedbackSection{
-    box-sizing: border-box;
-  width: 50%;
-    border: 1px solid red;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    margin-bottom: 0px;
-    padding: 10px;
-    gap: 10px;
-
+    border-bottom: 1px solid black;
+    overflow: hidden;
 }
 .chartAreaSection{
   

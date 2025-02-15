@@ -14,6 +14,9 @@ export const AllToiletFeedbackData=[{
         Q5:123,
         Q6:100,
         Q7:45,
+        Q1:14,
+        Q2:22,
+        Q3:28
     }],
     careTaker:"Surav dewedi",
     oAndM:"Sulab International",
@@ -95,10 +98,10 @@ export const AllToiletFeedbackData=[{
     }],
     careTaker:"Roshan Singh",
     oAndM:"Sulab International",
-    oneStar:2,
-    twoStar:2,
-    threeStar:2,
-    fourStar:2,
+    oneStar:27,
+    twoStar:120,
+    threeStar:21,
+    fourStar:150,
     fiveStar:221,
     category:"public Toilet"
 },]
