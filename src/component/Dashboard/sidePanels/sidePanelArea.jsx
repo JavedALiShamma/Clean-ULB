@@ -66,6 +66,14 @@ const onFeedback=()=>{
         }).toString()
     })
 }
+const onTourist=()=>{
+    navigate({
+        pathname:"/ULBDashboard/ImportantPlaces",
+        search:createSearchParams({
+        
+        }).toString()
+    })
+}
   return (
     <>
     <div id={styles.sidePanelSection} className="w-100 h-100">
@@ -95,10 +103,10 @@ const onFeedback=()=>{
                     <img className={styles.leftLogos} src={litterBin} alt="Tourist logo" />
                     </span>
                 Litters Bin /GVP</li>
-            <li className={styles.ptLeft}>
+            <li onClick={onTourist} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={Image} alt="Tourist logo" />
-                    </span>Tourist Area/ Railway Station / Bus Stand</li>
+                    </span>Tourist Area/ Railway Station / Bus Stand/other Important places</li>
             <li onClick={onFeedback} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={Image} alt="Tourist logo" />

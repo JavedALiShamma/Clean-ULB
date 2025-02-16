@@ -14,6 +14,7 @@ import FeedbackSection from "../../Feedback-Section";
 import CareTakerDashboard from "../../careTaker-Section";
 import { useState } from "react";
 import GRMainPage from "../../GrevinaceRedresselSection/MainDashboard";
+import ImportantPlacesArea from "../../ImportantPlaces";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     return(
@@ -61,6 +62,7 @@ const DashboardMain=()=>{
             <Route path="/feedbackSection" element={<FeedbackSection/>}></Route>
             <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
             <Route path="/GrievanceRedressal/*" element={<GRMainPage/>}></Route>
+            <Route path="/ImportantPlaces" element={<ImportantPlacesArea/>}></Route>
             <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>
