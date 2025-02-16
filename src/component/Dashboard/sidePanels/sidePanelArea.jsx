@@ -50,6 +50,14 @@ const onCandDWaste=()=>{
         }).toString()
     })
 }
+const onGD=()=>{
+    navigate({
+        pathname:"/ULBDashboard/GrievanceRedressal",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+}
 const onFeedback=()=>{
     navigate({
         pathname:"/ULBDashboard/feedbackSection",
@@ -60,14 +68,14 @@ const onFeedback=()=>{
 }
   return (
     <>
-    <div id={styles.sidePanelSection} className="">
+    <div id={styles.sidePanelSection} className="w-100 h-100">
         <div className={styles.UlbInformations}>
 
         </div>
         <ul className={styles.leftSections}>
             <div className={styles.ULBInfo}>
-               <p>ULB Name: Dungarpur</p> 
-               <p>ULB Code :800751</p> 
+               <p className="px-2 text-center text-dark h5 py-1">ULB Name: Dungarpur</p> 
+               <p className="px-2 text-center text-dark h5 py-1">ULB Code :800751</p> 
             </div>
             <li onClick={onDashboard} className={styles.dashboardSection}>
                 <span >
@@ -106,9 +114,9 @@ const onFeedback=()=>{
                     <img className={styles.leftLogos} src={careTker1} alt="Tourist logo" />
                     </span> Caretaker in Toilets
                     </li>
-            <li className={styles.ptLeft}>
+            <li onClick={onGD} className={styles.ptLeft}>
             <span >
-                    <img className={styles.leftLogos} src={GD} alt="Tourist logo" />
+                    <img className={styles.leftLogos} src={GD} alt="Grievance redressal" />
                     </span> Grievance Redressal/
                     शिकायत निवारण
                     </li>
@@ -119,7 +127,7 @@ const onFeedback=()=>{
                     </li>
             <li className={styles.ptLeft}>
             <span >
-                    <img className={styles.leftLogos} src={GD} alt="Tourist logo" />
+                    <img className={styles.leftLogos} src={GD} alt="Auto tipper" />
                     </span> Auto Tipper Tracker
                     </li>
         </ul>

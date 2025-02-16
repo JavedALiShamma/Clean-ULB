@@ -13,13 +13,14 @@ import LitterBins from "../../LitterBinsInULB";
 import FeedbackSection from "../../Feedback-Section";
 import CareTakerDashboard from "../../careTaker-Section";
 import { useState } from "react";
+import GRMainPage from "../../GrevinaceRedresselSection/MainDashboard";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     return(
         <>
         {/* //className={styles.navbaar} */}
-        <div className={styles.mainPageAll}>
-        <Navbar id={styles.navbarTop} expand="lg" className="bg-body-tertiary d-flex justify-content-between p-2">
+        <div className="w-100 d-flex flex-column">
+        <Navbar id={styles.navbarTop} expand="lg" className=" w-100 bg-body-tertiary d-flex justify-content-between p-2">
             <div className={styles.menuLogo}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
             <span onClick={()=>{setIsShow(!isShow)}} id={styles.menuBtn} className="material-symbols-outlined">menu</span>
@@ -43,12 +44,13 @@ const DashboardMain=()=>{
             </div>
         </Navbar>
        
-       <div className={styles.heroArea}>
-       {isShow && <div id={styles.sidePanel} className={styles.sidePanel}>
-        <SidePanelArea/>
+       <div className="w-100 d-flex">
+        {/* .heroArea */}
+       {isShow && <div id={styles.sidePanel} className="w-25">
+        <SidePanelArea className="w-100"/>
         </div>}
         
-        <div className={styles.heroRight}>
+        <div className="w-100">
        
         <Routes>
             
@@ -58,6 +60,7 @@ const DashboardMain=()=>{
             <Route path="/LitterBins" element={<LitterBins/>}></Route>
             <Route path="/feedbackSection" element={<FeedbackSection/>}></Route>
             <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
+            <Route path="/GrievanceRedressal/*" element={<GRMainPage/>}></Route>
             <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>

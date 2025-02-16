@@ -1,23 +1,14 @@
 #sidePanelSection{
-    width: 22%;
-    height:100vmax;
-    min-width: 300px;
-    padding-left: 0px !important;
-    background-color: #e7e7e7;
+   
+   
+   
+    background-color: #f6f3f3f4;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
  
 }
-.ULBInfo{
-   
-    display: flex;
-    flex-direction: column;
-    color:  cadetblue;
-    font-weight: 600;
-    line-height: 25px;
 
-}
 .leftSections li{
     display: flex;
     width: 100% !important;

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Heading2 } from "lucide-react";
 import DetailedView from "../DetailedToiletView";
 import ParamMissing from "../paramMissing";
+import ColumnCharts from "../charts/Bar charts";
 
 const ToiletBadge=(props)=>{
     const res=props.data;
@@ -47,35 +48,44 @@ const ToiletBadge=(props)=>{
                                                 <div className="w-100">
                                                 <div className="w-100 d-flex m-2 justify-content-between">
 
-                                                <h5 className="text-black text-center mx-3 ">These are the parameter which are missing in toilet through feedback</h5>
+                                                <h5 className="text-black text-center mx-3 ">These are the parameter which are missing in toilet through citizen feedback</h5>
                                                 <p className="badge text-white bg-danger p-3"> Total Marks deducted {(Object.keys(res.negativeFeedback[0]).length)*10}</p>
                                                 <button type="button" className="btn btn-success p-1 mx-3">Notify care taker</button>
                                                 </div>
                                                 </div>
                                                 <div className="w-100 d-flex gap-2 my-2">
 
-                                                    <DetailedView data={res.negativeFeedback}/>
+                                     <DetailedView data={res.negativeFeedback}/>
+                     </div>
+                                 <p className="text-white w-100 bg-danger">ULB is requested to fix these parameters for better performance</p>
+                              </div>
+                              <div className="w-100 text-black">
+                              <ParamMissing data={res.toiletID}/>
+                              </div>
+                              <div className="w-100 text-black d-flex">
+                                 <div className="w-50"> 
+                                 <ColumnCharts data={res}/>
+                                 </div>
+                                 <div className="w-50"> 
+                                        <h3 className="text-warning display-6 p-1"> Overall star rating of the toilet </h3>
+                                        <div style={{backgroundColor: "#d1e9fa"}} className="my-4 w-50 p-3 m-auto">
 
-                                                </div>
-                                                <p className="text-white w-100 bg-danger">ULB is requested to fix these parameters for better performance</p>
-                                             </div>
-                                             <div className="w-100 text-black">
-                                             <ParamMissing data={res.toiletID}/>
-                                             </div>
-                                             <div className="w-100 text-black d-flex">
-                                                <div className="w-50"> hi</div>
-                                                <div className="w-50"> bye</div>
-                                             </div>
-                                             <div className={styles.chartAreaSection}></div>
-                                         </div>
-                                        <button onClick={()=>(setIsShow(!isShow))} type="button" className="btn btn-primary m-1">Close</button>
-                                      </div>
-                                      </div>)}
+                                        <StarRating rating={starCountRating(res.fiveStar,res.fourStar,res.threeStar,res.twoStar,res.oneStar)}/>
+
                                         </div>
-                                            
-                                        </div>
-                                            
-                                        </div>
+                                       
+                                 </div>
+                              </div>
+                              <div className={styles.chartAreaSection}></div>
+                          </div>
+                         <button onClick={()=>(setIsShow(!isShow))} type="button" className="btn btn-primary m-1">Close</button>
+                       </div>
+                       </div>)}
+                         </div>
+                             
+                         </div>
+                             
+                         </div>
     )
 }
 export default ToiletBadge;

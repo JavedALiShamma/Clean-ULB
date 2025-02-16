@@ -62,12 +62,14 @@ const [btData,setbtData]=useState(bestToilet);
             <p>Public Toilet Feedback :{totalFeedback.pt}</p>
           </div>
         </div>
-        <div className={styles.dashboardBackground}>
+        <div style={{backgroundColor:"#d2e8a1"}} className="w-100 p-3 my-2">
+          {/*dashboardBackground  */}
         <h3 className={styles.bestPerformingHeading}>Best performing Toilet in ULB</h3>
-        <div className={styles.bestCtCardArea}>
+        <div className="w-100 d-flex bg-white">
+          {/* bestCtCardArea */}
           
           <div className={styles.ctCardLeft}>
-            <img className={styles.image1} src={btData.image}alt="" />
+            <img className={styles.image1} src={btData.image} alt="" />
           
             <div className={styles.imageCTDetails}>
                 <h3 className={styles.addressArea}>Addres:{btData.Address}</h3>  
@@ -84,7 +86,8 @@ const [btData,setbtData]=useState(bestToilet);
                   <p>Closing time: 10.00 PM</p>
                 </div>
                 <div className={styles.ratingToiletArea}>
-                  <p>Toilet Rating : {starCountRating(btData.fiveStar,btData.fourStar,btData.threeStar,btData.twoStar,btData.oneStar)} </p> <StarRating rating={starCountRating(btData.fiveStar,btData.fourStar,btData.threeStar,btData.twoStar,btData.oneStar)}/>
+                  <p>Toilet Rating : {starCountRating(btData.fiveStar,btData.fourStar,btData.threeStar,btData.twoStar,btData.oneStar)}
+                     </p> <StarRating rating={starCountRating(btData.fiveStar,btData.fourStar,btData.threeStar,btData.twoStar,btData.oneStar)}/>
                 </div>
             </div>
           </div>
@@ -99,6 +102,7 @@ const [btData,setbtData]=useState(bestToilet);
           <h3 className={styles.ssParamHead}><u>Parameter according to swachh Survekshan toolkit 2025</u></h3>
         </div>
         <div className={styles.bestPracticeArea1}>
+          {/* bestPracticeArea1*/}
           <button onClick={scrollLeft} className={styles.scrollLeftBtn}>↠</button>
           <div className={styles.bestPracticeCard}>
             <div className={styles.logoImage}>
