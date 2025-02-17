@@ -1,15 +1,17 @@
 import { Chart } from "react-google-charts";
 
-const PieChartArea=()=>{
-
+const PieChartArea=(props)=>{
+          const res=props.data;
+      
+        
  
     const data = [
         ["feedback", "per Month"],
     
         ["Dissatisfactory", 0],
-        ["Unclean", 2],
+        ["Unclean", res[1]] ,
         ["Very Satisfactory", 0],
-        ["Clean",3],  
+        ["Clean",res[0]],  
       ];
     
       const options = {

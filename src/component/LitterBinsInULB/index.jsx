@@ -58,7 +58,7 @@ const LitterBins=()=>{
           </div>
           <div className={styles.pieCharSection}>
 
-          <PieChartArea/>
+          <PieChartArea data={[data.filter((e)=>(e.isClean==true)).length,data.filter((e)=>(e.isClean==false)).length]}/>
           </div>
             </div>
                 <div id={styles.cardAreaSection} className="d-flex align-content-start flex-wrap">
