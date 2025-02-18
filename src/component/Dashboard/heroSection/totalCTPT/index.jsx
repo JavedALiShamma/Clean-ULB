@@ -15,6 +15,9 @@ import { Route, Routes } from "react-router";
 import IndividualToilet from "../../../Individual Toilet";
 import StarRating from "../../../feedback_Star";
 import { starCountRating } from "../../../feedback_Star/starCount";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
+import PieChartArea from "../../../pieChart";
+import Chart from "react-google-charts";
 
 
 /// Here we will use
@@ -48,6 +51,27 @@ const [btData,setbtData]=useState(bestToilet);
   const scrollRight=(i)=>{
     const parent=i.target.parentElement;
     parent.scrollLeft -=150;
+  }
+  const data = {
+    labels: [
+      'Red',
+      'Blue',
+      'Yellow'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [300, 50, 100],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  };  
+  const config = {
+    type: 'doughnut',
+    data: data,
   }
   var feedbackSum=totalFeedback.ct+totalFeedback.pt+totalFeedback.tourist;
     return(
@@ -99,67 +123,41 @@ const [btData,setbtData]=useState(bestToilet);
           </div>
         </div>
         <div className={styles.ssParameterHeading}>
-          <h3 className={styles.ssParamHead}><u>Parameter according to swachh Survekshan toolkit 2025</u></h3>
+          <h3 className={styles.ssParamHead}><u>Overview Detalis of cleanliness in ULB</u></h3>
         </div>
-        {/*  */}
-        <div id={styles.bestPracticeArea1} className="w-100 d-flex overflow-hidden m-auto">
-          {/* bestPracticeArea1*/}
-          <button onClick={scrollLeft} className={styles.scrollLeftBtn}>↠</button>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={toiletDustbin} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter : Litter bins available for disposing</h5>
-              <p className={styles.badge}>SS Makrs: 10</p>
-              <p className={styles.stepsTodo}>Steps to do: Put a dustbin for waste disposal of tissues and waste</p>
-            </div>
-          </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={handwash} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of soap/operational soap dispenser & air freshener</h5>
-              <p className={styles.badge}>SS Makrs: 10</p>
-              <p className={styles.stepsTodo}>Steps to do: Put a dustbin for waste disposal of tissues and waste</p>
-            </div>
-          </div>
-         
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={unAbleSeat} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter : Dedicated toilet seats for differently abled/trans-gender</h5>
-              <p className={styles.badge}>SS Makrs: 20</p>
-              <p className={styles.stepsTodo}>Place a low height toilet seats for childeren and different abled people</p>
-            </div>
-          </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={careTaker} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of Caretaker with name</h5>
-              <p className={styles.badge}>SS Makrs: 20</p>
-              <p className={styles.stepsTodo}>Steps to do:Caretaker should be present and log book is maintaned</p>
-            </div>
-          </div>
-        
-        
-         
-         
-          
-          
-          
-          
-          
-          
-          
-          
-          <button onClick={scrollRight} className={styles.scrollRightBtn}>↞</button>
+
+       <div className="w-100 bg-white d-flex flex-column">
+        <div className="w-100 bg-white">
+              <p style={{fontWeight:"700"}} className="text-succcess text-center text-success h3 p-3">Monitor how many places and bins are cleared right now</p>
         </div>
+        <div className="w-100 d-flex">
+        <div className="w-50">
+          <div className="w-100 d-flex">
+            <p className="w-25 text-center blockquote"> Cleaned : 50%</p>
+            <div className="w-75 border border-dark rounded">
+              <div style={{width:"50%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
+            </div>
+          </div>
+          <div className="w-100 d-flex flex-column border border-dark my-1 justify-content-center align-items-center">
+          <p className="display-6 text-center">Area Cleaned in ULB</p>
+            <PieChartArea data={[10,10]}/>
+          </div>
+        </div>
+        <div className="w-50">
+          <div className="w-100 d-flex">
+            <p className="w-25 text-center blockquote"> Cleaned :70%</p>
+            <div className="w-75 border border-dark rounded">
+              <div style={{width:"70%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
+            </div>
+          </div>
+          <div className="w-100 d-flex flex-column border border-dark my-1">
+            <p className="display-6 text-center">Bins cleaned in ULB</p>
+            <PieChartArea data={[70,30]}/>
+           
+          </div>
+        </div>
+       </div>
+       </div>
         
         </div>
        
