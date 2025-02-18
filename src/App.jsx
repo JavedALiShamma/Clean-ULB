@@ -12,6 +12,7 @@ import { BrowserRouter, Routes,Route } from "react-router";
 import DashboardMain from "./component/Dashboard/ULBPanel/index.jsx";
 import AddNewToilet from "./component/AddNewToilet/index.jsx";
 import RRRform from "./component/RRR_form/index.jsx";
+import MobileMainDashboard from "./Mobile App/MainDashboard/index.jsx";
 
 
 
@@ -20,7 +21,7 @@ const Header=()=>{
     <>
     <BrowserRouter>
     <Routes>
-     
+      <Route path="/Officials" element={<MobileMainDashboard/>}></Route>
       <Route path="/newEntry" element={<RRRform/>}></Route>
       <Route path="/ULBDashboard/*" element={<DashboardMain/>}></Route>
       <Route path="/feedbackForm" element ={<FeedbackArea/>}></Route>
