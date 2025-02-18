@@ -31,20 +31,20 @@ const AllQueryPage=()=>{
             <div className="w-100 p-2 border">
                 <p className="text-center p-2 lead">Filter complaints through category</p>
                 <div className="w-100 d-flex justify-content-between">
-                    <select class="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
-                      <option selected>Select complaint category</option>
+                    <select className="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
+                      <option >Select complaint category</option>
                       <option value="1">Dead Animal</option>
                       <option value="2">garbage bin not clean</option>
                       <option value="3">Garabage Vehicle </option>
                     </select>
-                    <select class="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
-                      <option selected>Select ward</option>
+                    <select className="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
+                      <option >Select ward</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">4</option>
                     </select>
-                    <select class="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
-                      <option selected>Select Zone</option>
+                    <select className="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
+                      <option >Select Zone</option>
                       <option value="1">North</option>
                       <option value="2">South</option>
                       <option value="3">East</option>
