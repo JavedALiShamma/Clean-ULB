@@ -29,15 +29,15 @@
     border-radius: 12px 12px 12px 12px;
    
 }
-.bestPracticeArea1{
-    margin-top: 10px;
-    width: fit-content;
+#bestPracticeArea1{
+    /* margin-top: 10px;
+    width: fit-content; */
     /* max-width: 98%; */
-   max-width: 1300px;
+   /* max-width: 1300px;
    margin: auto;
     height: fit-content;
     min-height: 300px;
-    display: flex;
+    display: flex; */
     /* padding: 5px; */
     border: 2px solid rgb(190, 187, 187);
     background-color: white;
@@ -171,7 +171,7 @@
     justify-content: center;
     align-items: center;
    overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 
 .bestPracticeCard{
@@ -186,7 +186,7 @@
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;   
-    position: relative;
+    
 }
 .bestPracticeCard:hover{
     transform: scale(1.01);

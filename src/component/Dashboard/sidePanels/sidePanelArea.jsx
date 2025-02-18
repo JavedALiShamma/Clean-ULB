@@ -28,10 +28,22 @@ const oncareTaker=()=>{
 
 }
 const onCommunityToilet=()=>{
-    location.pathname="/ULBDashboard/CommunityToilet";
+    navigate({
+        pathname:"/ULBDashboard/CommunityToilet",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+ 
 }
 const onRRRCentre=()=>{
-    location.pathname="/ULBDashboard/RRRCenter"
+    navigate({
+        pathname:"/ULBDashboard/RRRCenter",
+        search:createSearchParams({
+            
+        }).toString()
+    })
+   
 }
 
 const onLitterBoxSection=()=>{

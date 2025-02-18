@@ -62,7 +62,7 @@ const [btData,setbtData]=useState(bestToilet);
             <p>Public Toilet Feedback :{totalFeedback.pt}</p>
           </div>
         </div>
-        <div style={{backgroundColor:"#d2e8a1"}} className="w-100 p-3 my-2">
+        <div style={{backgroundColor:"#d2e8a1"}} className="w-auto p-3 my-1">
           {/*dashboardBackground  */}
         <h3 className={styles.bestPerformingHeading}>Best performing Toilet in ULB</h3>
         <div className="w-100 d-flex bg-white">
@@ -101,7 +101,8 @@ const [btData,setbtData]=useState(bestToilet);
         <div className={styles.ssParameterHeading}>
           <h3 className={styles.ssParamHead}><u>Parameter according to swachh Survekshan toolkit 2025</u></h3>
         </div>
-        <div className={styles.bestPracticeArea1}>
+        {/*  */}
+        <div id={styles.bestPracticeArea1} className="w-100 d-flex overflow-hidden m-auto">
           {/* bestPracticeArea1*/}
           <button onClick={scrollLeft} className={styles.scrollLeftBtn}>↠</button>
           <div className={styles.bestPracticeCard}>
@@ -124,16 +125,7 @@ const [btData,setbtData]=useState(bestToilet);
               <p className={styles.stepsTodo}>Steps to do: Put a dustbin for waste disposal of tissues and waste</p>
             </div>
           </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={handwash} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of soap/operational soap dispenser & air freshener</h5>
-              <p className={styles.badge}>SS Makrs: 10</p>
-              <p className={styles.stepsTodo}>Steps to do: Put a dustbin for waste disposal of tissues and waste</p>
-            </div>
-          </div>
+         
           <div className={styles.bestPracticeCard}>
             <div className={styles.logoImage}>
               <img className={styles.bpImg} src={unAbleSeat} alt="" />
@@ -154,36 +146,8 @@ const [btData,setbtData]=useState(bestToilet);
               <p className={styles.stepsTodo}>Steps to do:Caretaker should be present and log book is maintaned</p>
             </div>
           </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={careTaker} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of Caretaker with name</h5>
-              <p className={styles.badge}>SS Makrs: 20</p>
-              <p className={styles.stepsTodo}>Steps to do:Caretaker should be present and log book is maintaned</p>
-            </div>
-          </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={careTaker} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of Caretaker with name</h5>
-              <p className={styles.badge}>SS Makrs: 20</p>
-              <p className={styles.stepsTodo}>Steps to do:Caretaker should be present and log book is maintaned</p>
-            </div>
-          </div>
-          <div className={styles.bestPracticeCard}>
-            <div className={styles.logoImage}>
-              <img className={styles.bpImg} src={careTaker} alt="" />
-            </div>
-            <div className={styles.logoDetails}>
-              <h5 className={styles.parameter}>Paramter :Availability of Caretaker with name</h5>
-              <p className={styles.badge}>SS Makrs: 20</p>
-              <p className={styles.stepsTodo}>Steps to do:Caretaker should be present and log book is maintaned</p>
-            </div>
-          </div>
+        
+        
          
          
           
