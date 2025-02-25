@@ -7,8 +7,9 @@ const LoginPage = () => {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const handleSubmit=(e)=>{
-    e.preventDefault();
-    console.log(email,password);
+    /// Here we will use authorised user specification 
+    
+    
   }
   return (
     <div style={{objectFit:"contain",backgroundRepeat:"no-repeat",backgroundAttachment:"fixed"}} id={styles.backGroundArea} className="container d-flex justify-content-center align-items-center vh-100">

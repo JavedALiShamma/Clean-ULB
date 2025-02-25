@@ -4,7 +4,7 @@ import styles from "./styles.module.css"
 import swachLogo from "../../../assets/icons/swachh-logo.png";
 import profileManlogo from "../../../assets/icons/profileMan.png"
 import TotalCpTp from "../heroSection/totalCTPT";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, useParams, useNavigate, createSearchParams } from "react-router";
 import RouteToCT from "../Routes/RouteToCT";
 import AddNewToilet from "../../AddNewToilet";
 import RRRCenter from "../../RRR_Center";
@@ -17,6 +17,15 @@ import GRMainPage from "../../GrevinaceRedresselSection/MainDashboard";
 import ImportantPlacesArea from "../../ImportantPlaces";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
+    const navigate=useNavigate();
+    const handleHelp=()=>{
+        navigate({
+            pathname:"officials/EODashboard/:eoId",
+            search:createSearchParams({
+                
+            }).toString()
+        })
+    }
     return(
         <>
         {/* //className={styles.navbaar} */}
@@ -34,7 +43,7 @@ const DashboardMain=()=>{
                 <p className={styles.CityName}>Dungarpur:</p> 
                 <p className={styles.ULBname}>Dungarpur:</p> 
             </div>
-            <button type="btn" className="btn btn-danger px-3">Help ?</button>
+            <button onClick={handleHelp} type="btn" className="btn btn-danger px-3">Help ?</button>
             <button type="btn" className="btn btn-success px-3">Contact us</button>
             <div className={styles.NodalOfficerName}>
                 <img src={profileManlogo} alt="man log" />
