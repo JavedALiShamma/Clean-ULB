@@ -52,6 +52,9 @@ const [btData,setbtData]=useState(bestToilet);
     const parent=i.target.parentElement;
     parent.scrollLeft -=150;
   }
+  const handleRoute=(e)=>{
+    
+  }
   const data = {
     labels: [
       'Red',
@@ -135,10 +138,10 @@ const [btData,setbtData]=useState(bestToilet);
           <div className="w-100 d-flex">
             <p className="w-25 text-center blockquote"> Cleaned : 50%</p>
             <div className="w-75 border border-dark rounded">
-              <div style={{width:"50%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
+              <div  style={{width:"50%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
             </div>
           </div>
-          <div className="w-100 d-flex flex-column border border-dark my-1 justify-content-center align-items-center">
+          <div  style={{cursor:"pointer"}} className="w-100 d-flex flex-column border border-dark my-1 justify-content-center align-items-center">
           <p className="display-6 text-center">Area Cleaned in ULB</p>
             <PieChartArea data={[10,10]}/>
           </div>

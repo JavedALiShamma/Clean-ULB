@@ -21,7 +21,7 @@ const Header=()=>{
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="/Officials" element={<MobileMainDashboard/>}></Route>
+      <Route path="/Officials/*" element={<MobileMainDashboard/>}></Route>
       <Route path="/newEntry" element={<RRRform/>}></Route>
       <Route path="/ULBDashboard/*" element={<DashboardMain/>}></Route>
       <Route path="/feedbackForm" element ={<FeedbackArea/>}></Route>
