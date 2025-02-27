@@ -2,10 +2,42 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LineChart from "../../LineCharts";
 import { House, Bell, List, Person, ThreeDots } from "react-bootstrap-icons";
 import { FaArrowCircleRight } from "react-icons/fa";
-
+import { useEffect, useState } from "react";
+// import bin_percentage from "./AllApiCalls";
+import binCalculation from "./AllApiCalls";
+import WeeklyColumnChart from "../../MobileComponents/WeeklyCharts";
 
 export default function BottomNavbar() {
+  // console.log(binCalculation , "bincalulation is ")
+  const[binData,setBindata]=useState(0);
+  // console.log("binData is ",binData);
+  let cleanedPercentage=(user)=>{
+    let tLen=user.length;
+    // console.log("user.length",tLen)
+    let cleaned=user.filter((e)=>{
+       return(e.isCleaned===true)
+    })
+    // console.log("Clened is ",cleaned.length)
+    return((cleaned.length/tLen)*100);
+}
+  console.log(binCalculation)
+ useState(()=>{
+    binCalculation.then(user=>{
+      let result=cleanedPercentage(user);
+      setBindata(result)
+
+    })
   
+ },[binData])
+ const sampleData = [
+  { label: "Mon", value: 5 },
+  { label: "Tue", value: 8 },
+  { label: "Wed", value: 6 },
+  { label: "Thu", value: 10 },
+  { label: "Fri", value: 7 },
+  { label: "Sat", value: 12 },
+  { label: "Sun", value: 9 },
+];
   return (
     <>
     <div style={{height:"4rem", borderRadius:"0px 0px .7rem .7rem", background:"#F1F0E9"}} className="w-100 ">hel</div>
@@ -30,7 +62,7 @@ export default function BottomNavbar() {
                   
                
                    <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#4e9c91"}}>Bins Cleaned</h2>
-                   <p style={{fontWeight:"700"}} className="display-1 text-center text-white"> 92%</p>
+                   <p style={{fontWeight:"700"}} className="display-1 text-center text-white">{binData}%</p>
 
             </div>
               
@@ -46,16 +78,18 @@ export default function BottomNavbar() {
 
             <div style={{background:"#dbc77d"}} className="w-50 rounded border position-relative p-2">
             <FaArrowCircleRight style={{width:"2rem", height:"2rem",bottom:"0.8rem",right:"0.3rem",
-                    color:"#606ca8"
+                    color:"#918146"
                     }} className="position-absolute"/>
-                 <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#918146"}}>Complaints Resolved</h2>
+                 <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#918146"}}>
+                  Complaints Resolved</h2>
                  <p style={{fontWeight:"700"}} className="display-1 text-center text-white"> 50%</p>
             </div>
             <div style={{background:"#eedbd1"}} className="w-50 rounded border position-relative p-2">
             <FaArrowCircleRight style={{width:"2rem", height:"2rem",bottom:"0.8rem",right:"0.3rem",
-                    color:"#918146",
+                    color:"#ba8c73",
                     }} className="position-absolute"/>
-                 <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#ba8c73"}}>Toilet Cleaned</h2>
+                 <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#ba8c73"}}>
+                  Toilet Cleaned</h2>
                  <p style={{fontWeight:"700"}} className="display-1 text-center text-white"> 100%</p>
             </div>
             </div>
@@ -64,9 +98,12 @@ export default function BottomNavbar() {
      
       <LineChart/>
     </div>
-    <div className="w-100"> 
-      <h2>Hello</h2>
+    <div className="w-100 h-100"> 
+     <WeeklyColumnChart />
     </div>
+    <h2>helo</h2>
+    <h2>helo</h2>
+    <h2>helo</h2>
     </>
   );
 }
