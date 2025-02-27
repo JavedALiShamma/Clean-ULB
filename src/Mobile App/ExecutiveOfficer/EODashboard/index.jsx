@@ -40,7 +40,13 @@ export default function BottomNavbar() {
 ];
   return (
     <>
-    <div style={{height:"4rem", borderRadius:"0px 0px .7rem .7rem", background:"#F1F0E9"}} className="w-100 ">hel</div>
+    <div style={{height:"10rem", borderRadius:"0px 0px 1rem 1rem", background:"#f4e7e2",fontFamily:`"poppins" , serif`,}} className="w-100 ">
+          <h1>Executive Officer Login</h1>
+          <div style={{background:"#efded6"}} className="w-75 m-auto">
+            h2 </div>
+
+
+    </div>
     <nav className="navbar fixed-bottom bg-light border-top">
       <div className="container-fluid d-flex justify-content-around">
         <NavItem icon={<House size={24} />} />
@@ -94,11 +100,11 @@ export default function BottomNavbar() {
             </div>
             </div>
     </div>
-    <div className="w-100 p-2 h-auto">
+    {/* <div className="w-100 p-2 h-auto">
      
       <LineChart/>
-    </div>
-    <div className="w-100 h-100"> 
+    </div> */}
+    <div className="w-100"> 
      <WeeklyColumnChart />
     </div>
     <h2>helo</h2>
