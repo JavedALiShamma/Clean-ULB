@@ -1,11 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import LineChart from "../../LineCharts";
+import LineChart from "../../../component/LineCharts";
 import { House, Bell, List, Person, ThreeDots } from "react-bootstrap-icons";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 // import bin_percentage from "./AllApiCalls";
 import binCalculation from "./AllApiCalls";
 import WeeklyColumnChart from "../../MobileComponents/WeeklyCharts";
+import CustomNavbar from "../../MobileComponents/CustomNavbar";
 
 export default function BottomNavbar() {
   // console.log(binCalculation , "bincalulation is ")
@@ -40,13 +41,12 @@ export default function BottomNavbar() {
 ];
   return (
     <>
-    <div style={{height:"10rem", borderRadius:"0px 0px 1rem 1rem", background:"#f4e7e2",fontFamily:`"poppins" , serif`,}} className="w-100 ">
+    {/* <div style={{height:"10rem", borderRadius:"0px 0px 1rem 1rem", background:"#f4e7e2",fontFamily:`"poppins" , serif`,}} className="w-100 ">
           <h1>Executive Officer Login</h1>
           <div style={{background:"#efded6"}} className="w-75 m-auto">
             h2 </div>
-
-
-    </div>
+    </div> */}
+            <CustomNavbar/>
     <nav className="navbar fixed-bottom bg-light border-top">
       <div className="container-fluid d-flex justify-content-around">
         <NavItem icon={<House size={24} />} />

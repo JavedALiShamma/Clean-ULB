@@ -12,20 +12,20 @@ const LineChart = () => {
     datasets: [
       {
         label: 'Area Cleaned',
-        data: [65, 59, 92],
+        data: [65, 59, 92,35,58,100],
         fill: false,
         backgroundColor: 'rgb(75, 192, 192)',
         borderColor: 'rgba(75, 192, 192, 0.2)',
       },{
         label: 'Toilets Cleaned',
-        data: [61, 19, 80],
+        data: [61, 19, 80,88,54,80],
         fill: false,
         backgroundColor: 'green',
         borderColor: 'green',
 
       },{
         label:"Bins Cleaned",
-        data:[75,78,90,],
+        data:[75,78,90,72,45,90],
         fill:false,
         backgroundColor:"red",
         borderColor:"red"

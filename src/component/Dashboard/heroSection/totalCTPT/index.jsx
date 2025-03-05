@@ -18,6 +18,8 @@ import { starCountRating } from "../../../feedback_Star/starCount";
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import PieChartArea from "../../../pieChart";
 import Chart from "react-google-charts";
+import LineChart from "../../../LineCharts"
+import ProgressBar from "../../../Progress Bar";
 
 
 /// Here we will use
@@ -80,7 +82,7 @@ const [btData,setbtData]=useState(bestToilet);
     return(
         <>
       
-        <div className={styles.totalCtPtCal}>
+        {/* <div className={styles.totalCtPtCal}>
           <p>Total Feedack:{feedbackSum}</p>
           <div className={styles.totalFeedbackCt}>
             <p>Community Toilet Feedback :{totalFeedback.ct}</p>
@@ -88,9 +90,12 @@ const [btData,setbtData]=useState(bestToilet);
           <div className={styles.totalFeedbackPt}>
             <p>Public Toilet Feedback :{totalFeedback.pt}</p>
           </div>
-        </div>
+        </div> */}
         <div style={{backgroundColor:"#d2e8a1"}} className="w-auto p-3 my-1">
           {/*dashboardBackground  */}
+          <div className="w-100 bg-white">
+            <LineChart/>
+          </div>
         <h3 className={styles.bestPerformingHeading}>Best performing Toilet in ULB</h3>
         <div className="w-100 d-flex bg-white">
           {/* bestCtCardArea */}
@@ -135,10 +140,12 @@ const [btData,setbtData]=useState(bestToilet);
         </div>
         <div className="w-100 d-flex">
         <div className="w-50">
-          <div className="w-100 d-flex">
+          <div className="w-100 d-flex justify-content-center align-items-center">
             <p className="w-25 text-center blockquote"> Cleaned : 50%</p>
             <div className="w-75 border border-dark rounded">
-              <div  style={{width:"50%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
+
+              {/* <div  style={{width:"50%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div> */}
+              <ProgressBar progress={50} label="50%" color="success" />
             </div>
           </div>
           <div  style={{cursor:"pointer"}} className="w-100 d-flex flex-column border border-dark my-1 justify-content-center align-items-center">
@@ -147,10 +154,11 @@ const [btData,setbtData]=useState(bestToilet);
           </div>
         </div>
         <div className="w-50">
-          <div className="w-100 d-flex">
+          <div className="w-100 d-flex justify-content-center align-items-center">
             <p className="w-25 text-center blockquote"> Cleaned :70%</p>
             <div className="w-75 border border-dark rounded">
-              <div style={{width:"70%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div>
+              {/* <div style={{width:"70%",backgroundColor:"green",height:"100%",content:" "}} id="progressBar"></div> */}
+              <ProgressBar progress={70} label="70%" color="success" />
             </div>
           </div>
           <div className="w-100 d-flex flex-column border border-dark my-1">
