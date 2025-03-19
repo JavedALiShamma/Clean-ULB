@@ -138,8 +138,8 @@ const WeeklyColumnChart = () => {
         <div className="col-12 col-md-8 col-lg-6">
           <div className="card shadow-lg p-3 mb-5 bg-white rounded">
             <div className="card-body">
-              <h2 className="text-center mb-4" style={{ fontSize: window.innerWidth < 768 ? '1.25rem' : '1.5rem', fontWeight: 'bold' }}>
-                Weekly Percentage Column Chart
+              <h2 className="text-center mb-4 text-muted" style={{ fontSize: window.innerWidth < 768 ? '1.25rem' : '1.5rem', fontWeight: 'bold' }}>
+               Overall Cleanliness in ULB Week wise
               </h2>
               <div className="chart-container" style={{ position: 'relative', height: window.innerWidth < 768 ? '250px' : '400px' }}>
                 <Bar data={data} options={options} />
@@ -147,7 +147,7 @@ const WeeklyColumnChart = () => {
               {/* Custom Legend */}
               <div className="text-center mt-3">
                 <div className="d-inline-block p-2 rounded" style={{ backgroundColor: 'rgba(75, 192, 192, 0.2)', border: '1px solid rgba(75, 192, 192, 1)' }}>
-                  <span style={{ color: 'rgba(75, 192, 192, 1)', fontWeight: 'bold' }}>Total Cleanliness</span>
+                  <span style={{ color: 'rgba(75, 192, 192, 1)', fontWeight: 'bold' }}>This is section shows total cleanliness in the city </span>
                 </div>
               </div>
             </div>

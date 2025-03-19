@@ -86,6 +86,14 @@ const onTourist=()=>{
         }).toString()
     })
 }
+const onAutoTipper=()=>{
+    navigate({
+        pathname:"/ULBDashboard/Autotippertracker",
+        search:createSearchParams({
+        
+        }).toString()
+    })
+}
   return (
     <>
     <div id={styles.sidePanelSection} className="w-100 h-100">
@@ -105,11 +113,11 @@ const onTourist=()=>{
             <li onClick={onCommunityToilet} className={styles.ctLeft}>
                 <span>
                     <img className={styles.leftLogos} src="https://admin.sbmurban.org/assets/icons/toilet.svg" alt="CT" />
-                    </span>Community Toilet</li>
-            <li className={styles.ptLeft}>
+                    </span>Community Toilet /Public Toilet</li>
+            {/* <li className={styles.ptLeft}>
             <span>
                     <img  className={styles.leftLogos}  src="https://admin.sbmurban.org/assets/icons/toilet.svg" alt="CT" />
-                    </span>Public Toilets</li>
+                    </span>Public Toilets</li> */}
             <li onClick={onLitterBoxSection} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={litterBin} alt="Tourist logo" />
@@ -145,7 +153,7 @@ const onTourist=()=>{
                     <img onClick={onCandDWaste} className={styles.leftLogos} src={CandD} alt="Tourist logo" />
                     </span> C & D Waste Collection
                     </li>
-            <li className={styles.ptLeft}>
+            <li onClick={onAutoTipper} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={GD} alt="Auto tipper" />
                     </span> Auto Tipper Tracker

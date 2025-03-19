@@ -15,6 +15,8 @@ import CareTakerDashboard from "../../careTaker-Section";
 import { useState } from "react";
 import GRMainPage from "../../GrevinaceRedresselSection/MainDashboard";
 import ImportantPlacesArea from "../../ImportantPlaces";
+import GoogleMapView from "../../GoogleMaps";
+import GRDashboard from "../../Greviance Redressel/GRDashobard";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     const navigate=useNavigate();
@@ -57,10 +59,10 @@ const DashboardMain=()=>{
        <div className="w-100 d-flex">
         {/* .heroArea */}
        {isShow && <div id={styles.sidePanel} className="w-25">
-        <SidePanelArea className="w-100"/>
+        <SidePanelArea className="w-100 h-max"/>
         </div>}
         
-        <div className="w-100">
+        <div className="w-100 my-2">
        
         <Routes>
             
@@ -72,6 +74,7 @@ const DashboardMain=()=>{
             <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
             <Route path="/GrievanceRedressal/*" element={<GRMainPage/>}></Route>
             <Route path="/ImportantPlaces" element={<ImportantPlacesArea/>}></Route>
+            <Route path="/Autotippertracker" element={<GRDashboard/>}></Route>
             <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>
@@ -82,7 +85,9 @@ const DashboardMain=()=>{
        
         </div>
        
-        
+        <div style={{height:"10rem"}} className="w-100 bg-dark">
+            
+        </div>
         </div>
         
         </>

@@ -59,7 +59,7 @@ const GRMainPage=()=>{
             </div>
             <div className="w-100 border m-2">
                 <Routes>
-                    <Route  path="/AllComplaints"
+                    <Route  path="/*"
                         element={<AllQueryPage/>}></Route>
                         <Route path="/PendingComplaints"
                         element={<PendingQueriesArea/>}

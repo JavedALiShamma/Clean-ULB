@@ -7,11 +7,11 @@ export default function CustomNavbar() {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: "#e7e7e7" }} expand={false} className="shadow-sm px-3 d-flex justify-content-between">
+      <Navbar style={{ backgroundColor: "white" }} expand={false} className="shadow-sm px-3 d-flex justify-content-between">
         <Button variant="link" className="text-dark" onClick={() => setShow(true)}>
           <Menu size={24} />
         </Button>
-        <Navbar.Brand href="#">Logo</Navbar.Brand>
+        <Navbar.Brand href="#">Clean ULB</Navbar.Brand>
         <Dropdown align="end">
           <Dropdown.Toggle as={Button} variant="light" className="border-0">
             <User size={24} />
