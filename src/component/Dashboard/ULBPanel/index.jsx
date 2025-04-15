@@ -16,7 +16,8 @@ import { useState } from "react";
 import GRMainPage from "../../GrevinaceRedresselSection/MainDashboard";
 import ImportantPlacesArea from "../../ImportantPlaces";
 import GoogleMapView from "../../GoogleMaps";
-import GRDashboard from "../../Greviance Redressel/GRDashobard";
+import GRDashboard from "../../TraceAutoTipper/AutoTipperDashboard";
+import AutoTipperDashboard from "../../TraceAutoTipper/AutoTipperDashboard";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     const navigate=useNavigate();
@@ -74,7 +75,7 @@ const DashboardMain=()=>{
             <Route path="/toiletCaretaker" element={<CareTakerDashboard/>}></Route>
             <Route path="/GrievanceRedressal/*" element={<GRMainPage/>}></Route>
             <Route path="/ImportantPlaces" element={<ImportantPlacesArea/>}></Route>
-            <Route path="/Autotippertracker" element={<GRDashboard/>}></Route>
+            <Route path="/Autotippertracker" element={<AutoTipperDashboard/>}></Route>
             <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>

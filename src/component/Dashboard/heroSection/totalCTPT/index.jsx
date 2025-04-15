@@ -20,6 +20,7 @@ import PieChartArea from "../../../pieChart";
 import Chart from "react-google-charts";
 import LineChart from "../../../LineCharts"
 import ProgressBar from "../../../Progress Bar";
+import autoTipper from "../../../../assets/icons/auto-tipper.png"
 
 
 /// Here we will use
@@ -91,6 +92,30 @@ const [btData,setbtData]=useState(bestToilet);
             <p>Public Toilet Feedback :{totalFeedback.pt}</p>
           </div>
         </div> */}
+        <div style={{height:"7rem"}} className="w-100 p-2 d-flex align-items-end justify-content-end gap-2">
+          <div  className="h-100 border border-danger rounded w-25 p-1 d-flex gap-3">
+          <div className="spinner-grow text-danger" role="status">
+          <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="w-25 h-100">
+            <img className="w-100 h-100" src={autoTipper} alt="" />
+          </div>
+          <div style={{lineHeight:"15px"}} className="w-50 text-center d-flex flex-column">
+            <p style={{fontSize:"small" ,fontWeight:"600"}}>Auto tipper collecting waste in ULB</p>
+            <p style={{fontSize:"30px",fontWeight:"800",color:"red"}}>7</p>
+          </div>
+          </div>
+          <div  className="h-100 border border-success rounded w-25 p-2 d-flex gap-3">
+         
+          <div className="w-25 h-100">
+            <img className="w-100 h-100" src={autoTipper} alt="" />
+          </div>
+          <div  className="w-75 text-center d-flex flex-column">
+            <p style={{fontSize:"small" ,fontWeight:"600"}}>Auto tipper completed its trip</p>
+            <p style={{fontSize:"30px",fontWeight:"800",color:"green"}}>0</p>
+          </div>
+          </div>
+        </div>
         <div style={{backgroundColor:"#d2e8a1"}} className="w-auto p-3 my-1">
           {/*dashboardBackground  */}
           <div className="w-100 bg-white">

@@ -1,4 +1,5 @@
 import DounghnutChart from "../../DoughnutChart";
+import GrievanceDashboard from "./GrievanceDashboard";
 
 const AllQueryPage=()=>{
        
@@ -53,7 +54,7 @@ const AllQueryPage=()=>{
                 </div>
             </div>
         </div>
-        <h2 className="mx-4 text-dark">All Complaints</h2>
+        {/* <h2 className="mx-4 text-dark">All Complaints</h2>
         <div className="w-100 border d-flex">
             <div className="w-50 d-flex border border-primary">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5fu7KDi1Z9vjE4qy7HroAIl-Go0FmUrNi_g&s" alt="" className="img-thumbnail p-2" />
@@ -78,7 +79,8 @@ const AllQueryPage=()=>{
             </div>
             </div>
             </div>
-        </div>
+        </div> */}
+        <GrievanceDashboard/>
         </>
     )
 }

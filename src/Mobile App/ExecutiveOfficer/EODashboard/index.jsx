@@ -56,7 +56,7 @@ const onBinsClean=()=>{
     </div> */}
             <CustomNavbar className="bg-white"/>
             <div style={{background:"#e7e7e7",fontFamily:`"poppins" , serif`,borderRadius:"0 0 2rem 2rem"}}  className="w-100 p-3">
-              <p style={{fontWeight:500}} className="display-3 text-success">Hello, <span style={{fontSize:"1rem"}} className="text-dark">
+              <p style={{fontWeight:500}} className="display-5 text-success">Hello, <span style={{fontSize:"0.8rem"}} className="text-dark">
                 Commissioner
                 </span> 
                 </p>
@@ -82,7 +82,7 @@ const onBinsClean=()=>{
                     }} className="position-absolute"/>
                   
                
-                   <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#4e9c91"}}>Bins Cleaned</h2>
+                   <h2 className="text-center" style={{fontFamily:`"poppins" , serif`,color:"#4e9c91"}}>All Bins Cleaned</h2>
                    <p style={{fontWeight:"700"}} className="display-1 text-center text-white">{binData}%</p>
 
             </div>

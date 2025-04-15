@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navbar, Nav, Button, Dropdown, Offcanvas } from "react-bootstrap";
 import { Menu, User, LogOut } from "lucide-react";
 
-export default function CustomNavbar() {
+function CustomNavbar() {
   const [show, setShow] = useState(false);
 
   return (
@@ -39,3 +39,4 @@ export default function CustomNavbar() {
     </>
   );
 }
+export default CustomNavbar;

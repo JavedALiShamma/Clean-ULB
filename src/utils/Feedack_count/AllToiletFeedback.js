@@ -95,6 +95,7 @@ export const AllToiletFeedbackData=[{
         Q5:123,
         Q6:100,
         Q7:45,
+        Q1:1,
     }],
     careTaker:"Roshan Singh",
     oAndM:"Sulab International",
