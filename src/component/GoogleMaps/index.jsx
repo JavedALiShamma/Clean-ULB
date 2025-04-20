@@ -30,28 +30,25 @@ const GoogleMapView = () => {
   }, []);
 
   const addMarker = () => {
-    if (map) {
-      latlongTipper.map((ele)=>{
-        console.log(ele);
-        const {id,lat,lng}=ele;
-        const position =`{lat:${(lat)}, lng:${(lng)}}`;
-        const marker = new window.google.maps.Marker({
-          position,
-          map,
-          icon: {
-            url: "http://localhost:5173/src/assets/icons/auto-tipper.png", // Custom marker icon
-            scaledSize: new window.google.maps.Size(40, 40),
-          },
-        });
-        setMarkers((prevMarkers) => [...prevMarkers, marker]);
+    // if (map) {
+    //   latlongTipper.map((ele)=>{
+    //     console.log(ele);
+    //     const {id,lat,lng}=ele;
+    //     const position =`{lat:${(lat)}, lng:${(lng)}}`;
+    //     const marker = new window.google.maps.Marker({
+    //       position,
+    //       map,
+    //       icon: {
+    //         url: "http://localhost:5173/src/assets/icons/auto-tipper.png", // Custom marker icon
+    //         scaledSize: new window.google.maps.Size(40, 40),
+    //       },
+    //     });
+    //     setMarkers((prevMarkers) => [...prevMarkers, marker]);
         
-    }
+    // }
       
-      )
-   
-
-     
-    }
+    //   )
+    // }
     // if(map){
     //   const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
     //   const marker = new window.google.maps.Marker({

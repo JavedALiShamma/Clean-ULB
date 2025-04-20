@@ -29,6 +29,11 @@ const DashboardMain=()=>{
             }).toString()
         })
     }
+    const handleContact=()=>{
+        navigate({
+            pathname:"feedbackForm"
+        })
+    }
     return(
         <>
         {/* //className={styles.navbaar} */}
@@ -47,7 +52,7 @@ const DashboardMain=()=>{
                 <p className={styles.ULBname}>Dungarpur:</p> 
             </div>
             <button onClick={handleHelp} type="btn" className="btn btn-danger px-3">Help ?</button>
-            <button type="btn" className="btn btn-success px-3">Contact us</button>
+            <button onClick={handleContact} type="btn" className="btn btn-success px-3">Contact us</button>
             <div className={styles.NodalOfficerName}>
                 <img src={profileManlogo} alt="man log" />
                 <div>

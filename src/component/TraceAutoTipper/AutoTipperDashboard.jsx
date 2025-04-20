@@ -6,6 +6,7 @@ import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 import totalDistanceTravelled from "./DistanceCoveredByTipper";
 import { Combine } from "lucide-react";
 import CombinedTipper from "./All Tipper Combined/ComibinedTipper";
+import LiveLocationTracker from "./LiveLocationTracker";
  const AutoTipperDashboard=()=>{
     return(
         <>
@@ -15,6 +16,7 @@ import CombinedTipper from "./All Tipper Combined/ComibinedTipper";
             <div className="w-75">
 
             {/* <GoogleMapView /> */}
+            <LiveLocationTracker/>
             </div>
             <div
             className="w-25  d-flex flex-column p-1 text-center" 
