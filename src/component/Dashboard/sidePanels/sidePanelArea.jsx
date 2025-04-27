@@ -94,6 +94,16 @@ const onAutoTipper=()=>{
         }).toString()
     })
 }
+const onSpecialEvent=()=>{
+    navigate({
+        pathname:"/ULBDashboard/SpecialEvent"
+    })
+}
+const onWards=()=>{
+    navigate({
+        pathname:"/ULBDashboard/WardsCleaning"
+    })
+}
   return (
     <>
     <div id={styles.sidePanelSection} className="w-100 h-100">
@@ -142,15 +152,25 @@ const onAutoTipper=()=>{
                     <img className={styles.leftLogos} src={careTker1} alt="Tourist logo" />
                     </span> Caretaker in Toilets
                     </li>
+            <li onClick={onWards} className={styles.ptLeft}>
+            <span >
+                    <img className={styles.leftLogos} src={careTker1} alt="Wards logo" />
+                    </span> Ward Wise Cleaning
+                    </li>
+            <li onClick={onSpecialEvent} className={styles.ptLeft}>
+            <span >
+                    <img className={styles.leftLogos} src={careTker1} alt="Tourist logo" />
+                    </span> Special Events 
+                    </li>
             <li onClick={onGD} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={GD} alt="Grievance redressal" />
                     </span> Grievance Redressal/
                     शिकायत निवारण
                     </li>
-            <li className={styles.ptLeft}>
+            <li onClick={onCandDWaste} className={styles.ptLeft}>
             <span >
-                    <img onClick={onCandDWaste} className={styles.leftLogos} src={CandD} alt="Tourist logo" />
+                    <img  className={styles.leftLogos} src={CandD} alt="Tourist logo" />
                     </span> C & D Waste Collection
                     </li>
             <li onClick={onAutoTipper} className={styles.ptLeft}>

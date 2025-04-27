@@ -82,7 +82,7 @@ const VehicleTracker = () => {
   return (
     <div>
         {/* //google map api key REMOVE S FROM START OF API KEY */}
-      <LoadScript googleMapsApiKey="SAIzaSyCV_KMd361LiXqgpElJRjjTYe5oKtuaG0A">
+      <LoadScript googleMapsApiKey="AIzaSyCV_KMd361LiXqgpElJRjjTYe5oKtuaG0A">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
           <Polyline
             path={routeCoordinates}

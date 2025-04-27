@@ -18,6 +18,10 @@ import ImportantPlacesArea from "../../ImportantPlaces";
 import GoogleMapView from "../../GoogleMaps";
 import GRDashboard from "../../TraceAutoTipper/AutoTipperDashboard";
 import AutoTipperDashboard from "../../TraceAutoTipper/AutoTipperDashboard";
+import SpecialEvent from "../../SpecialEvents";
+import CDDashboard from "../../C&DCollections/C&DDashboard";
+import AppFooter from "../../footer";
+import WardsCleaning from "../../WardsCleaning";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     const navigate=useNavigate();
@@ -68,7 +72,7 @@ const DashboardMain=()=>{
         <SidePanelArea className="w-100 h-max"/>
         </div>}
         
-        <div className="w-100 my-2">
+        <div className="w-100">
        
         <Routes>
             
@@ -81,6 +85,10 @@ const DashboardMain=()=>{
             <Route path="/GrievanceRedressal/*" element={<GRMainPage/>}></Route>
             <Route path="/ImportantPlaces" element={<ImportantPlacesArea/>}></Route>
             <Route path="/Autotippertracker" element={<AutoTipperDashboard/>}></Route>
+            <Route path="/SpecialEvent" element={<SpecialEvent/>}></Route>
+            <Route path="/C&DWaste" element={<CDDashboard/>}></Route>
+            <Route path="/WardsCleaning" element={<WardsCleaning/>}></Route>
+            
             <Route path="*" element={<TotalCpTp/>}></Route> 
             
         </Routes>
@@ -91,8 +99,8 @@ const DashboardMain=()=>{
        
         </div>
        
-        <div style={{height:"10rem"}} className="w-100 bg-dark">
-            
+        <div className="w-100">
+            <AppFooter/>
         </div>
         </div>
         
