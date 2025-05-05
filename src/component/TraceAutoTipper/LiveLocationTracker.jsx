@@ -23,6 +23,24 @@ const routeCoordinates = [
     {lat:28.019730, lng:73.316235},
     {lat:28.018101, lng:73.314437},
     {lat:28.017078, lng:73.312073},
+    {lat:28.016647, lng:73.310913},
+  {lat:28.016298, lng:73.308246},
+  //28.015735, 73.306058
+  {lat:28.015735, lng:73.306058},
+  //28.014958, 73.305133
+  {lat:28.014958, lng:73.305133},
+  //28.014288, 73.304412
+  {lat:28.014288, lng:73.304412},
+  //28.013702, 73.303812
+  {lat:28.013702, lng:73.303812},
+  {lat:28.012998, lng:73.303041},
+  //28.012198, 73.302339
+  {lat:28.012198, lng:73.302339},
+  //28.011528, 73.301835
+  {lat:28.011528, lng:73.301835},
+  //
+  {lat:28.011528, lng:73.301835},
+
 
 ];
 const routeCoordinates1=[
@@ -36,6 +54,25 @@ const routeCoordinates1=[
   {lat:28.019730, lng:73.316235},
   {lat:28.018101, lng:73.314437},
   {lat:28.017078, lng:73.312073},
+  {lat:28.017177, lng:73.312073},
+  {lat:28.016647, lng:73.310913},
+  {lat:28.016298, lng:73.308246},
+  //28.015735, 73.306058
+  {lat:28.015735, lng:73.306058},
+  //28.014958, 73.305133
+  {lat:28.014958, lng:73.305133},
+  //28.014288, 73.304412
+  {lat:28.014288, lng:73.304412},
+  //28.013702, 73.303812
+  {lat:28.013702, lng:73.303812},
+  //28.012998, 73.303041 // new 
+  {lat:28.012998, lng:73.303041},
+  //28.012198, 73.302339
+  {lat:28.012198, lng:73.302339},
+  //28.011528, 73.301835
+  {lat:28.011528, lng:73.301835},
+  //
+  {lat:28.011528, lng:73.301835},
 
 ];
 
@@ -83,7 +120,7 @@ const VehicleTracker = () => {
     <div>
         {/* //google map api key REMOVE S FROM START OF API KEY */}
       <LoadScript googleMapsApiKey="AIzaSyCV_KMd361LiXqgpElJRjjTYe5oKtuaG0A">
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={16}>
           <Polyline
             path={routeCoordinates}
             options={{ strokeColor: 'green', strokeOpacity: 1, strokeWeight: 2 }}
