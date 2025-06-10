@@ -22,6 +22,9 @@ import SpecialEvent from "../../SpecialEvents";
 import CDDashboard from "../../C&DCollections/C&DDashboard";
 import AppFooter from "../../footer";
 import WardsCleaning from "../../WardsCleaning";
+import UserChargeDetails from "../../UserCharges/UserChargesDetails";
+import PlantsAndDumpsiteDashboard from "../../PlantsAndDumpsite/PlantsAndDumpsiteDashboard";
+import Dumpsite from "../../Plants/Dumpsite";
 const DashboardMain=()=>{
     const [isShow,setIsShow]=useState(true);
     const navigate=useNavigate();
@@ -88,6 +91,9 @@ const DashboardMain=()=>{
             <Route path="/SpecialEvent" element={<SpecialEvent/>}></Route>
             <Route path="/C&DWaste" element={<CDDashboard/>}></Route>
             <Route path="/WardsCleaning" element={<WardsCleaning/>}></Route>
+            <Route path="/UserChargesDeatils" element={<UserChargeDetails/>}></Route>
+            <Route path="/Plants&Dumpsite" element={<PlantsAndDumpsiteDashboard/>}></Route>
+            <Route path="/Plants&Dumpsite/dumpsite" element={<Dumpsite/>}></Route>
             
             <Route path="*" element={<TotalCpTp/>}></Route> 
             

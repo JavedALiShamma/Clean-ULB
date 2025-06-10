@@ -8,6 +8,7 @@ import careTker1 from "../../../assets/icons/careTaker1.png";
 import GD from "../../../assets/icons/GD.png";
 import litterBin from "../../../assets/icons/litterBin.png";
 import CandD from "../../../assets/icons/C&D.png"
+import dumpsite from "../../../assets/icons/dumpsite.png";
 function SidePanelArea() {
     const navigate=useNavigate();
 const onDashboard=()=>{
@@ -104,6 +105,16 @@ const onWards=()=>{
         pathname:"/ULBDashboard/WardsCleaning"
     })
 }
+const onUserCharge=()=>{
+    navigate({
+        pathname:"/ULBDashboard/UserChargesDeatils"
+    })
+}
+const onPlantsNDumpsite=()=>{
+         navigate({
+        pathname:"/ULBDashboard/Plants&Dumpsite"
+    })
+}
   return (
     <>
     <div id={styles.sidePanelSection} className="w-100 h-100">
@@ -142,6 +153,11 @@ const onWards=()=>{
                     <img className={styles.leftLogos} src={Image} alt="Tourist logo" />
                     </span>Feedbacks
                     </li>
+            <li onClick={onUserCharge} className={styles.ptLeft}>
+            <span >
+                    <img className={styles.leftLogos} src={Image} alt="Tourist logo" />
+                    </span>User Charges Collected
+                    </li>
             <li onClick={onRRRCentre} className={styles.ptLeft}>
             <span >
                     <img className={styles.leftLogos} src={RRR} alt="Tourist logo" />
@@ -177,6 +193,11 @@ const onWards=()=>{
             <span >
                     <img className={styles.leftLogos} src={GD} alt="Auto tipper" />
                     </span> Auto Tipper Tracker
+                    </li>
+            <li onClick={onPlantsNDumpsite} className={styles.ptLeft}>
+            <span >
+                    <img className={styles.leftLogos} src={dumpsite} alt="Auto tipper" />
+                    </span> Plants/ Dumpsite
                     </li>
         </ul>
     </div>
