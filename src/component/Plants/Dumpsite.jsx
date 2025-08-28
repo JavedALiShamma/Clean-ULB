@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Card, Button, Modal, Form } from 'react-bootstrap';
 import { Bar } from 'react-chartjs-2';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaWindowClose } from "react-icons/fa";
+
 import {
   Chart as ChartJS,
   BarElement,
@@ -11,13 +13,14 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import { Icon0Circle, Icon0CircleFill, Icon0Square, Icon1Square, Icon5Circle } from 'react-bootstrap-icons';
 
 // Register necessary components for Chart.js
 ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
 const Dumpsite = () => {
   const [totalTPD, setTotalTPD] = useState(150);
-  const [legacyTPD, setLegacyTPD] = useState(5000); // accumulated total
+  const [legacyTPD, setLegacyTPD] = useState(5354); // accumulated total
   const [autoTippersToday, setAutoTippersToday] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [newWeight, setNewWeight] = useState('');
@@ -111,6 +114,7 @@ const Dumpsite = () => {
             {autoTippersToday.map((tipper, idx) => (
               <li key={idx}>
                 {tipper.time} - {tipper.type} Waste - {tipper.weight} TPD
+               <FaWindowClose className='mx-3' size={24} />
               </li>
             ))}
           </ul>
